@@ -92,7 +92,7 @@ export default function Checkout() {
               {items.map((item) => (
                 <div key={item.id} className="flex justify-between text-sm text-foreground">
                   <span className="line-clamp-2">{item.title}</span>
-                  <span className="font-semibold">${(item.price * item.quantity).toFixed(2)}</span>
+                  <span className="font-semibold">Rs. {(item.price * item.quantity).toFixed(0)}</span>
                 </div>
               ))}
             </div>
@@ -208,7 +208,7 @@ export default function Checkout() {
                 <div key={item.id} className="flex justify-between text-sm">
                   <span className="text-muted-foreground line-clamp-1">{item.title.substring(0, 25)}...</span>
                   <span className="font-semibold text-foreground whitespace-nowrap ml-2">
-                    ${(item.price * item.quantity).toFixed(2)}
+                    Rs. {(item.price * item.quantity).toFixed(0)}
                   </span>
                 </div>
               ))}
@@ -217,11 +217,11 @@ export default function Checkout() {
             <div className="space-y-2 mb-6 pb-6 border-b border-border">
               <div className="flex justify-between text-sm text-muted-foreground">
                 <span>Subtotal</span>
-                <span>${total.toFixed(2)}</span>
+                <span>Rs. {total.toFixed(0)}</span>
               </div>
               <div className="flex justify-between text-sm text-muted-foreground">
                 <span>Tax (Est.)</span>
-                <span>${(total * 0.1).toFixed(2)}</span>
+                <span>Rs. {(total * 0.1).toFixed(0)}</span>
               </div>
               <div className="flex justify-between text-sm text-accent font-semibold">
                 <span>Shipping</span>
@@ -231,7 +231,7 @@ export default function Checkout() {
 
             <div className="flex justify-between text-xl font-bold text-foreground">
               <span>Total</span>
-              <span>${(total * 1.1).toFixed(2)}</span>
+              <span>Rs. {(total * 1.1).toFixed(0)}</span>
             </div>
           </div>
         </div>
