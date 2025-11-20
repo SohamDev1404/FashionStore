@@ -5,6 +5,8 @@ The UI mirrors H&M’s design language: clean typography, large product imagery,
 
 ![Hero Banner](public/placeholder.jpg)
 
+Live Demo → [https://fashion-store1.vercel.app/](https://fashion-store1.vercel.app/)
+
 ---
 
 ## ✨ Features
